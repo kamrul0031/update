@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rounder-border-box</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root{
+            font-size: 62.5%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .container{
+            background: linear-gradient(319deg, #250c80 0%, #4e0b6f 37%, #4b0530 100%);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box_in{
+            width: 30rem;
+            height: 30rem;
+            border-radius: 3rem;
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rounder_box{
+            width: 3rem;
+            height: 60rem;
+            background-color: red;
+            display: flex;
+            flex-direction: column;
+            animation: rorate 5s linear infinite;
+        }
+        .rb_1{
+            width: 100%;
+            height: 50%;
+            background-color: aqua;
+            box-shadow: 25px 0px 40px aqua;
+        }
+        .rb_2{
+            width: 100%;
+            height: 50%;
+            background-color: rgb(255, 29, 255);
+            box-shadow: -25px 0px 40px rgb(255, 29, 255);
+        }
+
+        .box-out{
+            width: 29rem;
+            height: 29rem;
+            border-radius: 3rem;
+            background-color: #663dff;
+            background-image: linear-gradient(319deg, #250c80 0%, #4e0b6f 37%, #4b0530 100%);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-out h1{
+            color: white;
+            -webkit-text-stroke: 0.4px black;
+            text-shadow: 2px 2px 5px black;
+            font-size: 2.5rem;
+        }
+        @keyframes rorate{
+           from{
+            transform: rotate(0deg);
+           }
+           to{
+            transform: rotate(-360deg);
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box_in">
+            <div class="rounder_box">
+                <div class="rb_1"></div>
+                <div class="rb_2"></div>
+            </div>
+        </div>
+        <div class="box-out">
+            <h1 class="fa-beat-fade">UpdateIT( official )</h1>
+        </div>
+    </div>
+</body>
+</html>
