@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2-rounder-border-box</title>
+    <title>Document</title>
     <style>
         html{
             font-size: 62.5%;
@@ -18,32 +18,29 @@
             height: 100vh;
         }
         .container{
-            background: linear-gradient(300deg, purple 0%, blue 80%);
             width: 100%;
             height: 100%;
+            background: linear-gradient(300deg, purple 0%, blue 80%);
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .box_in{
-            box-shadow: 2px 2px 100px white;
-            border: 0.1px solid #333333;
             width: 30rem;
             height: 40rem;
-            background-color: black;
+            background: black;
+            box-shadow: 2px 2px 100px white;
             margin: 2rem;
             padding: 0.5rem;
-            z-index: 1;
-            overflow: hidden;
+            border: 0.1px solid whitesmoke;
             border-radius: 3rem;
-
         }
         .box_out{
-            background: linear-gradient(150deg, purple 0%, blue 80%);
             width: 100%;
             height: 100%;
-            z-index: 1;
+            background: linear-gradient(150deg, purple 0%, blue 80%);
             border-radius: 3rem;
+            /* z-index: 1; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -59,18 +56,7 @@
         .rounder_box{
             width: 10rem;
             height: 50rem;
-            background: conic-gradient(from 20deg, aqua 0deg , aqua 180deg, rgb(237, 39, 255) 90deg , rgb(237, 39, 255) 180deg );
-            position: relative;
-            z-index: -1;
-            animation: rotate 5s linear infinite;
-        }
-        @keyframes rotate{
-            from{
-                transform: rotate(0deg);
-            }
-            to{
-                transform: rotate(360deg);
-            }
+            background: conic-gradient(from 20deg, aqua 0deg, aqua 180deg,pink 0deg, pink 180deg);
         }
     </style>
 </head>
@@ -79,12 +65,9 @@
         <div class="box_in">
             <div class="box_out">
                 <h1>UpdateIT( official )</h1>
-                <div class="rounder_box">
-
-                </div>
+                <div class="rounding_box"></div>
             </div>
         </div>
     </div>
-    
 </body>
 </html>

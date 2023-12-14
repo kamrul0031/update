@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loding ring</title>
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+           width: 100vw;
+           height: 100vh;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper{
+            width: 30rem;
+            height: 30rem;
+            /* background: red; */
+            /* gap: 2rem; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loder{
+            width: 50%;
+            height: 50%;
+            /* background: yellow; */
+            border-radius: 50%;
+            border-left: 10px solid aqua;
+        }
+        .wrapper .l-1{
+            animation: animate 2s linear infinite;
+        }
+        .wrapper .l-2{
+            animation: animate2 2s linear infinite;
+        }
+        .wrapper span{
+            font-size: 2rem;
+        }
+        @keyframes animate{
+            form{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes animate2{
+            form{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="loder l-1"></div>
+            <div class="loder l-2"></div>
+        </div>
+
+
+        <a href="gpt.html">gpt page</a>
+    </div>
+</body>
+</html>
