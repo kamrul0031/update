@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>single_img_card</title>
+    <title>single-image-card</title>
     <style>
         *{
             margin: 0;
@@ -17,42 +17,115 @@
         .container{
             width: 100%;
             height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .img_container{
-            background: red;
-            width: 25rem;
-            height: 15rem;
             padding: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
+        }.card{
+            background:black;
+            width: 450px;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 2rem;
+            position: relative;
+            border: 1px solid black;
+            box-shadow: 4px 4px 40px black;
         }
-        .img_container img{
+        img{
             width: 100%;
             height: 100%;
+            background-color: transparent;
+            border: 2px solid white;
             object-fit: cover;
-            object-position: 10rem;
+            object-position: -175px;
+            position: relative;
+            border-radius: 2rem;
+            transition: 2s;
+
         }
-        .img_container img:hover{
-            transition: 2s ease-out ;
-            transform: scale(1.2);
-            transform: rotate(-2deg);
-            object-fit: cover;
-            object-position: 0rem;
+        img:hover{
+         object-position: 0px;
+
         }
-        .img_container img::after{
-            transition: 5s linear;
-            transform: scale(1.2);
+        .card_info{
+            width: 400px;
+            height: 100%;
+            background: #00000050;  
+            backdrop-filter: blur(0.2rem);
+            padding-right: 15rem;
+            padding-top: 1rem;
+            position: absolute;
+            top: 0;
+            left: -25rem;
+            transition: 2s ease-in;
+            border-radius: 1.5rem;
+            border: 1px solid black;
+            box-shadow: 10px 10px 50px black;
+            display: flex;
+            flex-direction: column;
         }
+        .card_info h1{
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            color: rgb(255, 0, 68);
+            -webkit-text-stroke: 0.8px black;
+            text-align: center;
+            position: relative;
+            left: 15rem;
+        }
+        .card_info span{
+            font-size: 0.8rem;
+            text-align: center;
+            position: relative;
+            left: 15rem;
+            color: white;
+        }
+        
+        .qc{
+            color: red;
+            width: 8rem;
+            height: 14rem;
+            position: absolute;
+            right: 1rem;
+            /* left: 18.5rem; */
+            display: flex;
+            flex-direction: column;
+            gap :0.1rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .qc h1{
+            text-transform: capitalize;
+            text-align: center;
+            color: red;
+        }
+        .qc span{
+            text-transform: capitalize;
+            text-align: center;
+            color: white;
+        }
+        img:hover .qc{
+            display: none;
+        }
+
+        .card:hover .card_info{
+        left: -15rem;
+        }
+       
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="img_container">
-            <img src="anime1.jpeg" alt="">
+        <div class="card">
+            <div class="qc">
+                <h1>wing-x</h1>
+                <span>i can fly more than your thinking</span>
+            </div>
+            <img src="anime2.jpeg" alt="">
+            <div class="card_info">
+                <h1>wing-x</h1>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab neque officia incidunt voluptatum aliquam esse eaque minima voluptate quisquam maxime?</span>
+            </div>
         </div>
     </div>
 </body>
