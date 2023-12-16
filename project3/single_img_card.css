@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+
+
+
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }.card{
+            background:black;
+            width: 450px;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 2rem;
+            position: relative;
+            border: 1px solid black;
+            box-shadow: 4px 4px 40px black;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: 2px solid white;
+            object-fit: cover;
+            object-position: -175px;
+            position: relative;
+            border-radius: 2rem;
+            transition: 2s;
+
+        }
+        img:hover{
+         object-position: 0px;
+
+        }
+        .card_info{
+            width: 400px;
+            height: 100%;
+            background: #00000050;  
+            backdrop-filter: blur(0.2rem);
+            padding-right: 15rem;
+            padding-top: 1rem;
+            position: absolute;
+            top: 0;
+            left: -25rem;
+            transition: 2s ease-in;
+            border-radius: 1.5rem;
+            border: 1px solid black;
+            box-shadow: 10px 10px 50px black;
+            display: flex;
+            flex-direction: column;
+        }
+        .card_info h1{
+            font-family: Rubik Bubbles;            ;
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            color: rgb(255, 0, 68);
+            -webkit-text-stroke: 0.1px black;
+            text-align: center;
+            position: relative;
+            left: 15rem;
+        }
+        .card_info span{
+            font-family: agbalumo;
+            font-size: 0.8rem;
+            text-align: center;
+            position: relative;
+            left: 15rem;
+            color: white;
+        }
+        
+        .qc{
+            color: red;
+            width: 8rem;
+            height: 14rem;
+            position: absolute;
+            right: 1rem;
+            /* left: 18.5rem; */
+            display: flex;
+            flex-direction: column;
+            gap :0.1rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .qc h1{
+            font-family: Rubik Doodle Shadow;
+            text-transform: capitalize;
+            text-align: center;
+            color: red;
+        }
+        .qc span{
+            font-size: 0.4rem;
+            font-family: marhey;
+            text-transform: capitalize;
+            text-align: center;
+            color: white;
+        }
+        img:hover .qc{
+            display: none;
+        }
+
+        .card:hover .card_info{
+        left: -15rem;
+        }
